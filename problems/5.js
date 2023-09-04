@@ -1,4 +1,4 @@
-/**
+ /**
  * Problem 6: Custom Sorting
  * 
  * Given a list students, sort the students by their grade (descending).
@@ -7,7 +7,10 @@
  * @example [{name: "Chase", grade: 89}, {name: "Raman", grade: 92}] -> [{name: "Raman", grade: 92}, {name: "Chase", grade: 89}]
 */
 function problem(students) {
-    return null;
+    return students.sort((a, b) => { 
+        return b.grade - a.grade;
+    });
+    
 }
 
 const tests = [

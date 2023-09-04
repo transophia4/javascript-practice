@@ -8,7 +8,22 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let x = 0
+    let y = str.length - 1
+
+    while (x != y) {
+        if (((str.charAt(x) === str.charAt(y)) || (str.charAt(x).toLowerCase() === str.charAt(y).toLowerCase())) && (/\s/.test(str.charAt(x)) == false) && (/\s/.test(str.charAt(x)) == false)) {
+            x = x + 1;
+            y = y - 1;
+        } else if (/\s/.test(str.charAt(x)) == true) {
+            x = x + 1;
+        } else if (/\s/.test(str.charAt(x)) == true) {
+            y = y - 1;
+        } else {
+            return false;
+    };
+    return true;
+}
 }
 
 const tests = [

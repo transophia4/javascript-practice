@@ -7,7 +7,27 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    let countMap = new Map();
+    for (let i = 0; i < numbers.length; i++) {
+        if (!(numbers[i] in countMap)){
+            countMap.set(numbers[i], 1);
+        } else {
+            countMap.set(numbers[i], countMap.get(numbers[i])++);
+        }
+    }
+    let count = 0;
+    let majority = 0;
+    for (let [key, value] of countMap.entries()) {
+        if (value > count) {
+            majority = key;
+            count = value;
+        } else {
+            continue;
+        }
+            
+    }
+    
+    return majority;
 }
 
 const tests = [
